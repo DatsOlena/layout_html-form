@@ -16,18 +16,24 @@
       <fieldset>
         <legend>Personal information</legend>
         <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname"><br><br>
+        <input type="text" id="surname" name="surname"
+        autocomplete="off"><br><br>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name"
+        autocomplete="off"><br><br>
         <label for="age">How old are you?</label>
         <input type="number" id="age" name="age"
-        placeholder="12"><br><br>
-        <label for="date">Full date of birth:</label>
-        <input type="date" id="date" name="date"><br><br>
+        placeholder="12"
+        min="1"
+        max="100"
+        ><br><br>
+        <label for="birth">Full date of birth:</label>
+        <input type="date" id="birth" name="birth"><br><br>
         <label for="accept">I accept the term of agreement</label>
         <input type="checkbox" id="accept" name="accept"
         required><br><br>
-      </fieldset><br>
+      </fieldset><br><br>
+
       <fieldset>
         <legend>Registration</legend>
         <label for="email">E-mail:</label>
@@ -38,13 +44,44 @@
         <input type="password" id="password" name="password"
         minlength="6"
         maxlength="12"><br><br>
-      </fieldset><br>
+      </fieldset><br><br>
+
       <fieldset>
         <legend>An interesting fact about you!</legend>
-      </fieldset><br>
+        <span>Do you love cats?</span>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="radio">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="radio"><br><br>
+        <label for="color">What is your favorite color?</label>
+        <input type="color" id="color" name="color"
+        value="#000000"><br><br>
+        <label for="datetime">What time do you go to bed?</label>
+        <input type="datetime-local" id="datetime" name="datetime"><br><br>
+        <label for="cars">What are your favorite brand of cars?</label>
+        <select id="cars" name="cars" size="4" multiple>
+          <option value="volvo">BMW</option>
+          <option value="saab">Audi</option>
+          <option value="audi">Lada</option>
+        </select><br><br>
+        <label for="range">How do you rate our work?</label>
+        <input type="range" id="range" name="range">
+      </fieldset><br><br>
+
       <fieldset>
         <legend>Additional info:</legend>
-      </fieldset><br>
+        <label for="textarea">Comments:</label>
+        <input type="text" id="textarea" name="textarea"
+        autocomplete="off"
+        minlength="10"
+        maxlength="100"
+        ><br><br>
+        <label for="recommendation">Would you recommend us?</label>
+        <select id="recommendation">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </fieldset><br><br>
       <button type="submit" form="form" value="Submit">Submit</button>
     </form>
     <script type="text/javascript" src="./main.js"></script>
